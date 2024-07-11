@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg , rgb(3, 28, 54),rgb(16, 138, 194));
+    gap: 20px;
+}
+p{
+    font-size: 30pt;
+    color: white;
+    transition: display 1s ease;
+}
+main{
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(50px);
+    border-radius: 10px;
+    gap: 20px;
+    overflow: hidden;
+    height: 80px;
+    transition: height 1s ease;
+}
+input{
+    height: 40px;
+    width: 400px;
+    border: none;
+    border-bottom: solid white 3px;
+    background-color: transparent;
+    outline: none;
+    color: white;
+    font-size: 15pt;
+    padding: 20px 0px;
+}
+input::placeholder{
+    color: white;
+    font-size: 15pt;
+}
+button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18pt;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+article{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+}
+.clima{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+img{
+    height: 180px;
+}
+.clima-desc{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+}
+.clima-desc div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#temp{
+    font-size: 25pt;
+}
+
+.surgir{
+    height: 467.775px;
+}
+.desaparecer{
+    display: none;
+}
