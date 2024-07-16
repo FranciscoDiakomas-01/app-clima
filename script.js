@@ -25,17 +25,59 @@ btn.addEventListener("click",async(e)=>{
         return
     }else{
         try{
-
-            let data = await fetch("")
+            let apiKy = "f0182b330bef6aee363a3ff348cc718c"
+            let cidade = input.value
+            let data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(cidade)}&lang=pt&appid=${apiKy}`)
             let res = await data.json()
-            switch(res.temp){
-                case "30" :
-                    img.src = ""
-                    break;
-                default :
-                    img.src = "./img/icons8-computers-connecting-48.png"    
+            if(res.cod == 200){
+                let velociadeVento = res.wind.speed
+                let titulo = res.weather[0].description
+                let temperatura = Number(res.main.temp).toFixed(1).toString().replace(".",",")
+                let nomeCidade = res.name
+                let humidity = res.main.humidity
+                let pais = res.sys.country
+                let main = res.weather[0].main
+                console.log(res)
+                let temp = document.getElementById("temp").textContent = temperatura + " º C"
+                let Hhumidity = document.getElementById("humidity").textContent = humidity + "%"
+                let nomeCidadeHTML = document.getElementById("nomeCidade").textContent = `${nomeCidade} ,${pais}`
+                let description = document.getElementById("temp_desc").textContent = titulo
+                let VelocidadeVentoHTM = document.getElementById("VelocidadeVento").textContent = `${velociadeVento}Km/h`
+
+                //escolhendo a imagem
+                switch(main){
+                    case "Rain":
+                        img.src = "./img/icons8-rain-cloud-48.png"
+                        break;
+                    case "Clouds":
+                        img.src = "./img/icons8-cloud-48.png"
+                        break;
+                    case "Clear":
+                        img.src = "./img/icons8-clouds-48.png"
+                        break;
+                    case "Atmosphere":
+                        img.src = "./img/icons8-sun-48.png"
+                        break;
+                    case "Drizzle":
+                        img.src = "./img/icons8-rainfall-48.png"
+                        break;
+                    case "Thunderstorm":
+                        img.src = "./img/icons8-cloud-lightning-48.png"
+                        break;
+                    case "Snow":
+                        img.src = "./img/icons8-snow-storm-48.png"
+                        break;
+                    default:
+                        break;
+                }
+                
+
             }
-    
+            
+
+            
+
+
         }catch(err){
             console.log("Erro")
             img.src = "./img/icons8-computers-connecting-48.png"
