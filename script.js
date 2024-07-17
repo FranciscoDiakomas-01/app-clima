@@ -32,13 +32,13 @@ btn.addEventListener("click",async(e)=>{
             if(res.cod == 200){
                 let velociadeVento = res.wind.speed
                 let titulo = res.weather[0].description
-                let temperatura = Number(res.main.temp).toFixed(1).toString().replace(".",",")
                 let nomeCidade = res.name
                 let humidity = res.main.humidity
                 let pais = res.sys.country
                 let main = res.weather[0].main
                 console.log(res)
-                let temp = document.getElementById("temp").textContent = temperatura + " º C"
+                let celcius = Math.ceil(Number(res.main.temp) - 273.15)
+                let temp = document.getElementById("temp").textContent = celcius + " º C"
                 let Hhumidity = document.getElementById("humidity").textContent = humidity + "%"
                 let nomeCidadeHTML = document.getElementById("nomeCidade").textContent = `${nomeCidade} ,${pais}`
                 let description = document.getElementById("temp_desc").textContent = titulo
