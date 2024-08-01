@@ -72,6 +72,12 @@ btn.addEventListener("click",async(e)=>{
                 }
                 
 
+            }else{
+                img.src = "./img/icons8-computers-connecting-48.png"
+                h1.textContent = "Ups! ocoreu um erro!"
+                h2.textContent = ""
+                climaDesc.style.display = "none"
+                
             }
             
 
@@ -79,11 +85,11 @@ btn.addEventListener("click",async(e)=>{
 
 
         }catch(err){
-            console.log("Erro")
             img.src = "./img/icons8-computers-connecting-48.png"
             h1.textContent = "Ups! ocoreu um erro!"
             h2.textContent = ""
             climaDesc.style.display = "none"
+            let description = document.getElementById("temp_desc").textContent = "Error"
         }
         main.classList.add("surgir")
         p.classList.add("desaparecer")
