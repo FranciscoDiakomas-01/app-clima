@@ -68,6 +68,7 @@ btn.addEventListener("click",async(e)=>{
                         img.src = "./img/icons8-snow-storm-48.png"
                         break;
                     default:
+                        img.src = "./img/icons8-clouds-48.png"
                         break;
                 }
                 
