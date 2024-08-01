@@ -43,7 +43,7 @@ btn.addEventListener("click",async(e)=>{
                 let nomeCidadeHTML = document.getElementById("nomeCidade").textContent = `${nomeCidade} ,${pais}`
                 let description = document.getElementById("temp_desc").textContent = titulo
                 let VelocidadeVentoHTM = document.getElementById("VelocidadeVento").textContent = `${velociadeVento}Km/h`
-
+                climaDesc.style.display = "flex"
                 //escolhendo a imagem
                 switch(main){
                     case "Rain":
