@@ -73,7 +73,7 @@ btn.addEventListener("click",async(e)=>{
                 
 
             }else{
-                img.src = "./img/./img/web.png"
+                img.src = "./img/web.png"
                 h1.textContent = "Ups! Cidade não Encotrada"
                 h2.textContent = ""
                 climaDesc.style.display = "none"
