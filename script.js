@@ -77,6 +77,7 @@ btn.addEventListener("click",async(e)=>{
                 h1.textContent = "Ups! Cidade não Encotrada"
                 h2.textContent = ""
                 climaDesc.style.display = "none"
+                let description = document.getElementById("temp_desc").textContent = "Error"
                 
             }
             
