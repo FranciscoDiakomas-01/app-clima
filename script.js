@@ -74,10 +74,10 @@ btn.addEventListener("click",async(e)=>{
 
             }else{
                 img.src = "./img/web.png"
-                h1.textContent = "Ups! Cidade não Encotrada"
+                h1.textContent = "Cidade não Encotrada"
                 h2.textContent = ""
                 climaDesc.style.display = "none"
-                let description = document.getElementById("temp_desc").textContent = "Error"
+                let description = document.getElementById("temp_desc").textContent = ""
                 
             }
             
@@ -87,10 +87,10 @@ btn.addEventListener("click",async(e)=>{
 
         }catch(err){
             img.src = "./img/web.png"
-            h1.textContent = "Ups! ocoreu um erro!"
+            h1.textContent = "Offline!"
             h2.textContent = ""
             climaDesc.style.display = "none"
-            let description = document.getElementById("temp_desc").textContent = "Error"
+            let description = document.getElementById("temp_desc").textContent = ""
         }
         main.classList.add("surgir")
         p.classList.add("desaparecer")
